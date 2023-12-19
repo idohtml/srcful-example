@@ -7,6 +7,8 @@ import { RxCross1 } from "react-icons/rx";
 // import { FaRegHandScissors } from "react-icons/fa";
 import { GiSundial } from "react-icons/gi";
 
+// TODO: Make the speed of the navbar faster
+
 export default function Navbar() {
   const [mobileNav, setMobileNav] = useState(false);
 
@@ -132,7 +134,7 @@ export default function Navbar() {
                         href={link.href}
                         key={index}
                         onClick={toggleMobileNav}
-                        className="flex items-start text-6xl tracking-widest font-semibold uppercase"
+                        className="flex items-start text-4xl tracking-widest font-semibold capitalize"
                       >
                         {link.title}
                       </motion.a>

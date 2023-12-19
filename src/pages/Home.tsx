@@ -1,7 +1,17 @@
-import Hero from "@/assets/images/hero.png";
 import H1 from "@/components/typography/H1";
+import H2 from "@/components/typography/H2";
+import H3 from "@/components/typography/H3";
 import Text from "@/components/typography/Text";
 import { Button } from "@/components/ui/button";
+import Card from "@/components/Card";
+import Events from "@/data/Events";
+import Steps from "@/data/Steps";
+
+// Images
+import Hero from "@/assets/images/hero.png";
+
+// TODO: Add a footer section and showcase the project
+// TODO: Add social media to the footer
 
 export default function Home() {
   return (
@@ -17,9 +27,44 @@ export default function Home() {
             eco-friendly mining solution, maximizing both efficiency and
             profitability.
           </Text>
-          <Button className="w-full bg-green-400 md:w-fit">Explore</Button>
+          <Button className="w-full bg-green-400 text-black md:w-fit hover:bg-green-600">
+            Explore
+          </Button>
         </div>
-        <img src={Hero} alt="" />
+        <img src={Hero} alt="Srcful bringing the tech-world together" />
+      </section>
+      <section className="my-24">
+        <H2 className="text-center mb-12">Our upcoming events for 2024</H2>
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 md:gap-5">
+          {Events.map((event, index) => (
+            <Card key={index} event={event} />
+          ))}
+        </div>
+      </section>
+      {/* subscribe for newsletter section */}
+      <section className="grid place-items-center my-24">
+        <H2 className="text-center mb-12">How does it work?</H2>
+        {Steps.map((step, index) => (
+          <div
+            key={index}
+            className={`flex flex-col items-center gap-6 md:flex-row ${
+              index === 1 ? "md:flex-row-reverse" : ""
+            }`}
+          >
+            <div className="w-full md:w-1/2 my-12 text-center md:text-left">
+              <H3>{step.title}</H3>
+              <Text>{step.text}</Text>
+            </div>
+            <div className="w-full md:w-1/2">
+              <img
+                height={100}
+                className="h-52 w-full object-cover rounded-lg"
+                src={step.image}
+                alt="project image"
+              />
+            </div>
+          </div>
+        ))}
       </section>
     </main>
   );

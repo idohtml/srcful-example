@@ -3,7 +3,7 @@ import image2 from "@/assets/images/event-2.jpg";
 import image3 from "@/assets/images/event-3.jpg";
 
 interface Step {
-  image?: HTMLImageElement;
+  image: string;
   title: string;
   text: string;
 }

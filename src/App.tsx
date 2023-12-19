@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "./components/theme-provider";
 import Home from "./pages/Home";
 import Header from "./components/shared/Header";
+import Footer from "./components/shared/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
             <Route path="/" element={<Home />} />
           </Routes>
         </Router>
+        <Footer />
       </ThemeProvider>
     </div>
   );

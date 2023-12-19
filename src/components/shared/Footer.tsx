@@ -25,7 +25,9 @@ export default function Footer() {
             type="email"
             placeholder="Enter your email"
           />
-          <Button className="bg-green-400 hover:bg-green-600">Sign Up</Button>
+          <Button className="text-black bg-green-400 hover:bg-green-600">
+            Sign Up
+          </Button>
         </div>
 
         <div>

@@ -10,9 +10,6 @@ import Steps from "@/data/Steps";
 // Images
 import Hero from "@/assets/images/hero.png";
 
-// TODO: Add a footer section and showcase the project
-// TODO: Add social media to the footer
-
 export default function Home() {
   return (
     <main>
@@ -41,7 +38,19 @@ export default function Home() {
           ))}
         </div>
       </section>
-      {/* subscribe for newsletter section */}
+      <section className="flex flex-col items-center justify-evenly gap-2 md:flex-row">
+        <p className="text-9xl">🗞️</p>
+        <div className="text-center mb-2 md:text-left md:mb-0">
+          <H2>Weekly Newsletter</H2>
+          <p>Sign-up today to get information about our next upcoming events</p>
+        </div>
+        <Button
+          size="lg"
+          className="uppercase text-black bg-green-400 hover:bg-green-600 "
+        >
+          sign up
+        </Button>
+      </section>
       <section className="grid place-items-center my-24">
         <H2 className="text-center mb-12">How does it work?</H2>
         {Steps.map((step, index) => (

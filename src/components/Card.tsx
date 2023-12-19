@@ -27,7 +27,7 @@ const Card: React.FC<CardProps> = ({ event }) => {
         <p>{event.description}</p>
       </div>
       <div className="p-4">
-        <Button className="bg-green-400 hover:bg-green-600 w-full md:w-fit">
+        <Button className="text-black bg-green-400 hover:bg-green-600 w-full md:w-fit">
           Read more
         </Button>
       </div>

@@ -4,7 +4,6 @@ import { Button } from "../ui/button";
 import { motion, AnimatePresence, MotionConfig } from "framer-motion";
 import { RxCross1 } from "react-icons/rx";
 
-// import { FaRegHandScissors } from "react-icons/fa";
 import { GiSundial } from "react-icons/gi";
 
 // TODO: Make the speed of the navbar faster

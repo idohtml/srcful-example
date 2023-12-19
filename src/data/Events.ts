@@ -6,7 +6,7 @@ import image5 from "@/assets/images/event-5.jpg";
 import image6 from "@/assets/images/event-6.jpg";
 
 interface Event {
-  image?: HTMLImageElement;
+  image: string;
   title: string;
   subTitle: string;
   description: string;
